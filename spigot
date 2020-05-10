@@ -49,14 +49,14 @@ build_server() {
 
 first_run() {
     # Sync files from $MINECRAFT_SRC to $MINECRAFT_HOME. Do this on container's first run.
-    #if [ -f "/run/first_time" ]; then
+    if [ -f "/run/first_time" ]; then
     #    # Ensure that only the relevant plugins are enabled on the server.
     #    mkdir -p $MINECRAFT_HOME/plugins
     #    rm $MINECRAFT_HOME/plugins/*.jar*
 
-    #    rsync -avh --exclude '/world*' $MINECRAFT_SRC/ $MINECRAFT_HOME
-    #    rm /run/first_time
-    #fi
+        rsync -avh --exclude '/world*' $MINECRAFT_SRC/ $MINECRAFT_HOME
+        rm /run/first_time
+    fi
 
     # Create the server.properties if it doesn't exist
     if [ ! -f "$MINECRAFT_HOME/server.properties" ]; then
