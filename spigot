@@ -16,6 +16,7 @@ check_env() {
     if [ "$MINECRAFT_EULA" == "true" ]; then
         echo "Updating $MINECRAFT_HOME/eula.txt"
         echo "eula=$MINECRAFT_EULA" > $MINECRAFT_HOME/eula.txt
+        echo "Munro spigot v1.0 is working"
     else
         >&2 echo "Mojang requires you to accept their EULA. You need to set the MINECRAFT_EULA variable to true."
         exit 1
