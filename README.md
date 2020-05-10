@@ -7,16 +7,17 @@
 
 This Docker image allows you to get a Spigot instance quickly, with minimal fuss.
 
-This image was based on the `dlord/minecraft` Docker Image, with a few changes
-and enhancements.
+This image was based on the `dlord/spigot` Docker Image. And is a fork of that image, with the primal change being that it doesn't remove the jar files on first build.
 
 
 ## Base Docker image
 
 * java:8
+* dlord/spigot
 
 
 ## How to use this image
+This is all copied from dlord/spigot readme.
 
 ### Starting an instance
 
@@ -254,9 +255,7 @@ to `/usr/src/minecraft`.
 
 When a container is started for the first time, the contents of this folder is
 copied to `MINECRAFT_HOME` via `rsync`, except for anything that starts with
-`world`. It will also ensure that the `MINECRAFT_HOME/plugins` folder exists,
-and it will clean out any plugin jar files to make way for new ones. This is
-the simplest way to roll out updates without going inside the data volume.
+`world`. 
 
 ### World Templates
 
