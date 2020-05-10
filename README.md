@@ -107,7 +107,7 @@ stopped.
 Once enabled, you may now execute console commands like so:
 
     docker exec spigot-instance spigot console say hello everybody!
-
+    
 Some warnings when using this feature:
 
 * **DO NOT USE `-it` ON `docker exec`!** For some reason, it crashes
@@ -195,6 +195,13 @@ agree to Minecraft's EULA before you can start Spigot.
 #### MINECRAFT_OPTS
 
 You may adjust the JVM settings via the `MINECRAFT_OPTS` variable.
+An example by setting Ram variables:
+
+```
+...
+-e MINECRAFT_OPTS=-Xms512M -Xmx2048M
+...
+```
 
 #### Environment variables for server.properties
 
