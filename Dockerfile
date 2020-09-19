@@ -7,6 +7,7 @@ ENV MINECRAFT_VERSION=1.16.3
 ENV MINECRAFT_HOME="/opt/minecraft"
 ENV MINECRAFT_SRC="/usr/src/minecraft"
 ENV MINECRAFT_EULA=false
+ENV MINECRAFT_OPTS=-server -Xmx2048m -XX:MaxPermSize=512m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC
 
 EXPOSE 25565
 
