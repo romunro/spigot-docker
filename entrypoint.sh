@@ -50,4 +50,4 @@ check_env
 #start the server
 echo "Starting server"
 cd $MINECRAFT_HOME
-java -jar spigot*.jar $MINECRAFT_OPTS -nogui
+java -jar $MINECRAFT_OPTS spigot*.jar -nogui
