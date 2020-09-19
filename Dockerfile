@@ -8,6 +8,8 @@ ENV MINECRAFT_HOME="/opt/minecraft"
 ENV MINECRAFT_SRC="/usr/src/minecraft"
 ENV MINECRAFT_EULA=false
 
+EXPOSE 25565
+
 VOLUME ["/opt/minecraft"]
 WORKDIR /opt/minecraft
 
