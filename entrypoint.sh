@@ -33,7 +33,8 @@ if [ "$CURRENT_VERSION" != "$MINECRAFT_VERSION" ]; then
     java -Xmx1024M -jar BuildTools.jar -- rev $MINECRAFT_VERSION
 
     #install new server version from source dir to server home dir
-    echo "Moving new jar"
+    echo "Removing old server jar, and moving new jar to server dir"
+    rm -f $MINECRAFT_HOME/spigot*.jar
     cp -r $MINECRAFT_SRC/spigot-*.jar $MINECRAFT_HOME
 
     echo $MINECRAFT_VERSION > $VERSION_FILE
