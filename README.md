@@ -1,4 +1,4 @@
-# 1.12-pack Minecraft Modpack Docker Image
+# Minecraft Spigot server Docker Image
 ## What is it?
 A Docker image (which builds on openjdk:8-jre Docker image) with which you can easily set up a dockerized version of a Spigot Minecraft server
 
