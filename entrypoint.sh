@@ -3,8 +3,9 @@ set -e
 VERSION_FILE="$MINECRAFT_HOME/version"
 CURRENT_VERSION=$(head -n 1 $VERSION_FILE || echo "does not exist")
 MINECRAFT_OPTS=${MINECRAFT_OPTS:-"-server -Xmx2048m -XX:MaxPermSize=512m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC"}
-
+FORCE_UPDATE=${FORCE_UPDATE:-false}
 SPIGOT_BUILDTOOLS_URL=${SPIGOT_BUILDTOOLS_URL:-"https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"}
+MINECRAFT_VERSION=${MINECRAFT_VERSION:-"latest"}
 
 
 mkdir -p $MINECRAFT_SRC || true
@@ -20,10 +21,12 @@ check_env() {
         exit 1
     fi
 }
+echo "Force update is currently: $FORCE_UPDATE"
+echo "Version is currently: $CURRENT_VERSION"
 
-    #check for server version mismatch
-if [ "$CURRENT_VERSION" != "$MINECRAFT_VERSION" ]; then
-    cd $MINECRAFT_SRC
+    #check for server version mismatch  "$CURRENT_VERSION" != "$MINECRAFT_VERSION" ||
+if [ "$CURRENT_VERSION" != "$MINECRAFT_VERSION" ]||[ "$FORCE_UPDATE" == true ]; then
+    cd "$MINECRAFT_SRC"
 
     #download and create new server jar from buildtools jar
     echo "Version mismatch: $MINECRAFT_VERSION (selected version) != $CURRENT_VERSION (current installed version). Downloading BuildTools"

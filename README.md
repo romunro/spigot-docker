@@ -21,6 +21,9 @@ Set standard to `false`. `MINECRAFT_EULA` has to be set to `true` by the user to
 ### MINECRAFT_OPTS
 `MINECRAFT_OPTS` default set to the following extra parameters `-server -Xmx2048m -XX:MaxPermSize=512m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC`. You could change this if you desire more or less memory for the server.
 
+### FORCE_UPDATE
+`FORCE_UPDATE` default set to 'false' give you the option to update the .jar of the server. By changing `FORCE_UPDATE` to 'true' a new .jar will be made on startup, and the old .jar will be removed.
+
 ## Updating and config files
 If there is a mismatch between the user set `MINECRAFT_VERSION` and currently installed server version, the server will do the following:
 - Download the BuildTools.jar from Spigot, and generate a server jar with the desired `MINECRAFT_VERSION` .
