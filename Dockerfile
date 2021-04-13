@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM openjdk:11.0.10-jre-buster
 MAINTAINER Ronan Munro ronan18@live.nl
 
 EXPOSE 25565
@@ -15,8 +15,9 @@ EXPOSE 25565
 VOLUME ["/opt/minecraft"]
 WORKDIR /opt/minecraft
 
-RUN apt-get update && apt-get install -y wget vim
-RUN apt install git-all -y
+RUN apt-get update && apt-get install -y wget vim \
+    && apt install git-all -y \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /root/entrypoint.sh
 

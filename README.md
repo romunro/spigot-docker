@@ -1,6 +1,6 @@
 # Minecraft Spigot server Docker Image
 ## What is it?
-A Docker image (which builds on openjdk:8-jre Docker image) with which you can easily set up a dockerized version of a Spigot Minecraft server
+A Docker image with which you can easily set up a dockerized version of a Spigot Minecraft server. You can choose between a openJDK flavour of 8 or 11, latest in 11.
 
 
 ## Enviroment Tables
