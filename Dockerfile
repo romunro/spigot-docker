@@ -1,5 +1,5 @@
-FROM openjdk:11.0.10-jre-buster
-MAINTAINER Ronan Munro ronan18@live.nl
+FROM openjdk:16.0.1-jdk-buster
+MAINTAINER Ronan Munro https://github.com/romunro
 
 EXPOSE 25565
 

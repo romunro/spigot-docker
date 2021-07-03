@@ -10,7 +10,7 @@ buildarm32:
 	docker buildx build --platform linux/arm/v8 -t ronnieonthehub/spigotmc:arm32 --load .
 
 pushmerge:
-	docker buildx build  --platform linux/amd64,linux/arm64/v8 -t ronnieonthehub/spigotmc: --push .
+	docker buildx build  --platform linux/amd64,linux/arm64/v8 -t ronnieonthehub/spigotmc:latest --push .
 
 push:
 	docker push ronnieonthehub/spigotmc:latest
