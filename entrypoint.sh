@@ -2,7 +2,7 @@
 set -e
 VERSION_FILE="$MINECRAFT_HOME/version"
 CURRENT_VERSION=$(head -n 1 $VERSION_FILE || echo "does not exist")
-MINECRAFT_OPTS=${MINECRAFT_OPTS:-"-server -Xmx2048m -XX:MaxPermSize=512m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC"}
+MINECRAFT_OPTS=${MINECRAFT_OPTS:-"-server -Xmx2048m"}
 FORCE_UPDATE=${FORCE_UPDATE:-false}
 SPIGOT_BUILDTOOLS_URL=${SPIGOT_BUILDTOOLS_URL:-"https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"}
 MINECRAFT_VERSION=${MINECRAFT_VERSION:-"latest"}
