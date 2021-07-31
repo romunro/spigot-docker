@@ -7,7 +7,7 @@ ENV MINECRAFT_VERSION="latest"
 ENV MINECRAFT_HOME="/opt/minecraft"
 ENV MINECRAFT_SRC="/usr/src/minecraft"
 ENV MINECRAFT_EULA=false
-ENV MINECRAFT_OPTS="-server -Xmx2048m -XX:MaxPermSize=512m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC"
+ENV MINECRAFT_OPTS="-server -Xmx2048m"
 ENV FORCE_UPDATE=false
 
 EXPOSE 25565

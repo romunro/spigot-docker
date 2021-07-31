@@ -7,7 +7,7 @@ A Docker image with which you can easily set up a dockerized version of a Spigot
 There are several enviroment varbiables which can be altered.
 
 ### MINECRAFT_VERSION
-`MINECRAFT_VERSION` is default set to `latest`. This will use the latest (stable) version of Minecraft to build your Spigot server. During the install of the server a version file will be written to the `MINECRAFT_HOME` directory. This is used to determine if there is a diffrence between `MINECRAFT_VERSION` (set by the user) and the version of the server installed. This variable can be changed to the desired version of the Minecraft.
+`MINECRAFT_VERSION` is default set to `latest`. This will use the latest (stable) version of Minecraft to build your Spigot server. During the install of the server a version file will be written to the `MINECRAFT_HOME` directory. This is used to determine if there is a difference between `MINECRAFT_VERSION` (set by the user) and the version of the server installed. This variable can be changed to the desired version of the Minecraft.
 
 ### MINECRAFT_EULA
 Set standard to `false`. `MINECRAFT_EULA` has to be set to `true` by the user to be able to start the server.
