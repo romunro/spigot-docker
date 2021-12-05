@@ -1,4 +1,4 @@
-FROM openjdk:16.0.1-jdk-buster
+FROM openjdk:17.0.1-slim-buster
 MAINTAINER Ronan Munro https://github.com/romunro
 
 EXPOSE 25565
@@ -9,6 +9,7 @@ ENV MINECRAFT_SRC="/usr/src/minecraft"
 ENV MINECRAFT_EULA=false
 ENV MINECRAFT_OPTS="-server -Xmx2048m"
 ENV FORCE_UPDATE=false
+ENV SPIGOT_BUILDTOOLS_URL="https://hub.spigotmc.org/jenkins/job/BuildTools/lastStableBuild/"
 
 EXPOSE 25565
 
