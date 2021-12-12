@@ -29,9 +29,10 @@ if [ "$CURRENT_VERSION" != "$MINECRAFT_VERSION" ]||[ "$FORCE_UPDATE" == true ]; 
     cd "$MINECRAFT_SRC"
 
     #download and create new server jar from buildtools jar
-    echo "Version mismatch: $MINECRAFT_VERSION (selected version) != $CURRENT_VERSION (current installed version). Downloading BuildTools"
-    wget -O "$MINECRAFT_SRC/BuildTools.jar" "$SPIGOT_BUILDTOOLS_URL"
-    echo "Creating new server jar"
+    echo "Version mismatch: $MINECRAFT_VERSION (selected version) != $CURRENT_VERSION (current installed version). Downloading BuildTools" &&
+    wget -O "$MINECRAFT_SRC/BuildTools.jar" "$SPIGOT_BUILDTOOLS_URL" &&
+    echo "Download Finished!" &&
+    echo "Creating new server jar" &&
     cd $MINECRAFT_SRC
     java -Xmx1024M -jar BuildTools.jar -- rev $MINECRAFT_VERSION
 

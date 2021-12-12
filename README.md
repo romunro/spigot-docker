@@ -1,6 +1,6 @@
 # Minecraft Spigot server Docker Image
 ## What is it?
-A Docker image with which you can easily set up a dockerized version of a Spigot Minecraft server. You can choose between a openJDK flavour of 8 or 17, latest is in 17. This means you can setup a Spigot Minecraft server with the lastest version of Minecraft, which requires Java 17 or higher.
+A Docker image with which you can easily set up a dockerized version of a Spigot Minecraft server. You can choose between a openJDK flavour of 8 or 17, latest is in 17 and is LTS. This means you can setup a Spigot Minecraft server with the lastest version of Minecraft, which requires Java 17 or higher.
 
 
 ## Enviroment Tables
