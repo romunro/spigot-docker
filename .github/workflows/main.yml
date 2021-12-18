@@ -31,7 +31,7 @@ jobs:
           docker buildx build \
             --cache-from "type=local,src=/tmp/.buildx-cache" \
             --cache-to "type=local,dest=/tmp/.buildx-cache" \
-            --platform linux/arm64/v7,linux/arm64/v8,linux/amd64  \
+            --platform linux/arm64/v8,linux/amd64  \
             --output "type=image,push=false" \
             --tag ronnieonthehub/spigotmc:latest \
             --file ./Dockerfile ./
@@ -46,7 +46,7 @@ jobs:
         run: |
           docker buildx build \
             --cache-from "type=local,src=/tmp/.buildx-cache" \
-            --platform linux/arm64/v7,linux/arm64/v8,linux/amd64  \
+            --platform linux/arm64/v8,linux/amd64  \
             --output "type=image,push=true" \
             --tag ronnieonthehub/spigotmc:latest \
             --file ./Dockerfile ./
