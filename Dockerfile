@@ -1,4 +1,4 @@
-FROM openjdk:17.0.1-slim-buster
+FROM openjdk:17-slim-buster
 MAINTAINER Ronan Munro https://github.com/romunro
 
 EXPOSE 25565
