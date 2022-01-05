@@ -1,12 +1,8 @@
 name: buildx
 
 on:
-  pull_request:
-    branches: master
   push:
     branches: master
-  schedule:
-     - cron:  '30 6 * * 2,4,6'
 
 jobs:
   buildx:
