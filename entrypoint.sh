@@ -34,7 +34,7 @@ if [ "$CURRENT_VERSION" != "$MINECRAFT_VERSION" ]||[ "$FORCE_UPDATE" == true ]; 
     echo "Download Finished!" &&
     echo "Creating new server jar" &&
     cd $MINECRAFT_SRC
-    java -Xmx1024M -jar BuildTools.jar -- rev $MINECRAFT_VERSION
+    java -Xmx1024M -jar BuildTools.jar --rev $MINECRAFT_VERSION
 
     #install new server version from source dir to server home dir
     echo "Removing old server jar, and moving new jar to server dir"
