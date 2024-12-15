@@ -1,5 +1,5 @@
 # build:
-# 	docker build -t ronnieonthehub/spigotmc:latest	.
+# 	docker build -t ronnieonthehub/peerflix-server:latest	.
 buildamd:
 	docker buildx build --platform linux/amd64 -t alpine-amd64 --load .
 
@@ -10,8 +10,9 @@ buildarm32:
 	docker buildx build --platform linux/arm/v8 -t ronnieonthehub/spigotmc:arm32 --load .
 
 build:
-	docker buildx build --push --platform linux/arm64/v7,linux/arm64/v8,linux/amd64  --tag ronnieonthehub/spigotmc:latest .
-# 	docker buildx build  --platform linux/amd64,linux/arm64/v8 -t ronnieonthehub/spigotmc:latest --push .
+	docker buildx build --platform linux/arm64,linux/amd64  --tag ronnieonthehub/spigotmc:latest .
+#	docker buildx build --push --platform linux/arm64/v7,linux/arm64/v8,linux/amd64  --tag ronnieonthehub/spigotmc:latest .
+# 	docker buildx build  --platform linux/amd64,linux/arm64/v8 -t ronnieonthehub/spigot-server:latest --push .
 
 push:
 	docker push ronnieonthehub/spigotmc:latest
