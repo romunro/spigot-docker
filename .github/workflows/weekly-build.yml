@@ -1,8 +1,9 @@
-name: buildx
+name: buildx-weekly
 
 on:
-  push:
-    branches: master
+  workflow_dispatch:
+  schedule:
+     - cron:  '30 6 * * 2,4,6'
 
 jobs:
   buildx:
@@ -37,7 +38,7 @@ jobs:
             --cache-to "type=local,dest=/tmp/.buildx-cache" \
             --platform linux/arm64/v8,linux/amd64  \
             --output "type=image,push=false" \
-            --tag ronnieonthehub/spigotmc:latest \
+            --tag ronnieonthehub/spigotmc:weekly \
             --file ./Dockerfile ./
       -
         name: Docker Buildx (push)
@@ -46,9 +47,9 @@ jobs:
             --cache-from "type=local,src=/tmp/.buildx-cache" \
             --platform linux/arm64/v8,linux/amd64  \
             --output "type=image,push=true" \
-            --tag ronnieonthehub/spigotmc:latest \
+            --tag ronnieonthehub/spigotmc:weekly \
             --file ./Dockerfile ./
       -
         name: Inspect image
         run: |
-          docker buildx imagetools inspect ronnieonthehub/spigotmc:latest
+          docker buildx imagetools inspect ronnieonthehub/spigotmc:weekly
